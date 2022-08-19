@@ -2,7 +2,7 @@
  * @Author: yiyang 630999015@qq.com
  * @Date: 2022-08-15 10:56:47
  * @LastEditors: yiyang 630999015@qq.com
- * @LastEditTime: 2022-08-16 18:46:19
+ * @LastEditTime: 2022-08-17 17:35:41
  * @FilePath: /self/AwesomeProject/screens/index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -30,7 +30,7 @@ export default function Home(props){
             <Text onPress={()=>{
                 Navigation.push(props.componentId, {
                     component: {
-                      name: 'welcomeScreen',
+                      name: 'welcome',
                       options: {
                         topBar: {
                           title: {
@@ -55,6 +55,19 @@ export default function Home(props){
             }}>welcome</Text>
         </View>
     </SafeAreaView>)
+}
+
+Home.options={
+  backButton: {
+    color: 'black'
+  },
+  bottomTab: {
+    text: "home2",
+    textColor: '#666666',
+    fontSize: 10,
+    selectedFontSize: 14,
+    selectedTextColor: 'red',
+  }
 }
 
 const styles = StyleSheet.create({
